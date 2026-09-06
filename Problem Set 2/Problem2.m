@@ -3,6 +3,7 @@ n = [30000 1e6];
 S = [single(0) single(0)];
 accSum = [1 - 1/(n(1) + 1), 1 - 1/(n(2) + 1)];  
 
+
 for i = 1:2
     for k = 1:n(i)
         S(i) = S(i) + single(1)/(single(k)*single(k+1));
