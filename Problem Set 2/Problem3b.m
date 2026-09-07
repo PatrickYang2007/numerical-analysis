@@ -1,11 +1,15 @@
 x = 1 - eps/2;
-count = 0;
+badN = [];
+badP = [];
+badI = [];
 for n = 1:200
     delta = 1/n;
-    p = x - delta*floor(x/delta);
+    i = floor(x/delta);
+    p = x - delta*i;
     if p < 0
-        n
-        count = count + 1;
+        badN(end+1) = n;
+        badP(end+1) = p;
+        badI(end+1) = i;
     end
 end
-count 
+count = numel(badN)
