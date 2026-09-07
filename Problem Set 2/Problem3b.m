@@ -1,4 +1,4 @@
-x = 1 - eps/2;
+x = .5 - eps/4;
 goodN = [];
 badN = [];
 for n = 1:200
